@@ -1,0 +1,15 @@
+>Homo_sapiens | Human | Taxonomy: Primates; Haplorrhini; Catarrhini; Hominidae
+>Pan_troglodytes | Common chimpanzee | Taxonomy: Primates; Haplorrhini; Catarrhini; Hominidae
+>Pan_paniscus | Bonobo | Taxonomy: Primates; Haplorrhini; Catarrhini; Hominidae
+>Gorilla_gorilla | Western gorilla | Taxonomy: Primates; Haplorrhini; Catarrhini; Hominidae
+>Pongo_abelii | Sumatran orangutan | Taxonomy: Primates; Haplorrhini; Catarrhini; Hominidae
+>Nomascus_leucogenys | Northern white-cheeked gibbon | Taxonomy: Primates; Haplorrhini; Catarrhini; Hylobatidae
+>Macaca_mulatta | Rhesus macaque | Taxonomy: Primates; Haplorrhini; Catarrhini; Cercopithecidae
+>Cebus_capucinus | White-faced capuchin | Taxonomy: Primates; Haplorrhini; Platyrrhini; Cebidae
+>Saimiri_boliviensis | Bolivian squirrel monkey | Taxonomy: Primates; Haplorrhini; Platyrrhini; Cebidae
+>Callithrix_jacchus | Common marmoset | Taxonomy: Primates; Haplorrhini; Platyrrhini; Callitrichidae
+>Alouatta_palliata | Mantled howler monkey | Taxonomy: Primates; Haplorrhini; Platyrrhini; Atelidae
+>Ateles_geoffroyi | Geoffroy's spider monkey | Taxonomy: Primates; Haplorrhini; Platyrrhini; Atelidae
+>Papio_anubis | Olive baboon | Taxonomy: Primates; Haplorrhini; Catarrhini; Cercopithecidae
+>Chlorocebus_sabaeus | Green monkey (African vervet) | Taxonomy: Primates; Haplorrhini; Catarrhini; Cercopithecidae
+>Lemur_catta | Ring-tailed lemur | Taxonomy: Primates; Strepsirrhini; Lemuriformes; Lemuridae

@@ -1,0 +1,37 @@
+---
+title: "TIMs Evolution"
+author: "Ahmed Aquib"
+date: "2025-08-14"
+output: powerpoint_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## TIM4
+
+- TIMD4_HUMAN
+- T-cell immunoglobulin and mucin domain-containing protein 4
+- 378 AA in length
+- PS binding receptor expressed on APCs
+
+## TIM4 Domain and Evolution
+
+- Igv Domain containing protein
+- Orthologs with significant homology present in vertebrates (42% Homology with Zebra Fish timd4; Alliance of Genome)
+- No significant homology with invertebrates (C. elegans, and Drosophila; Blast)
+- Igv Domain containing proteins are present in invertebrates
+
+## Slide with R Output
+
+```{r cars, echo = TRUE}
+
+```
+
+## Slide with Plot
+
+```{r pressure}
+
+```
+
