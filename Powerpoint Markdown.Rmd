@@ -7,11 +7,21 @@ output:
   ioslides_presentation: default
 editor_options: 
   markdown: 
-    wrap: 72
+    wrap: 64
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
+BiocManager::install(c("msa", "Biostrings", "seqinr", "ape"))
+devtools::install_github("YuLab-SMU/ggmsa")
+BiocManager::install("DECIPHER")
+library(ggplot2)
+library(dplyr)
+library(Biostrings)
+library("msa")
+library("DECIPHER")
+library(seqinr)
+library(ape)
 ```
 
 ## TIM4
@@ -43,14 +53,43 @@ Northern white-cheeked gibbon\
 Common marmoset\
 **Strepsirrhines:** *Lemur catta* – Ring-tailed lemur
 
-## Molecular
+## A quick look at the length of CDNA
 
-```{r cars, echo = TRUE}
+```{r input data, echo = TRUE}
+#Input fasta file save as dna_seqs
+dna_seqs <- readDNAStringSet("Sequences/Timd4_Raw_Primate.fasta", format = "fasta")
+
+df <- data.frame(
+    name = sub(" .*", "", names(dna_seqs)),
+    length = width(dna_seqs) - 1000
+)
+
+ggplot(df, aes(x = length, y = reorder(name, length))) +
+    geom_col(fill = "indianred1") +
+    geom_text(aes(label = length), size = 3.5) + 
+    labs(x = "Length above 1000 bp", y = "Species") +
+    theme_minimal(base_size = 12)
 
 ```
 
-## Slide with Plot
+## Multiple Seqence Alignment
 
-```{r pressure}
+```{r codon_aware_alignment, include=FALSE}
+aln_codon <- AlignTranslation(dna_seqs, processors = 4)
+writeXStringSet(aln_codon, "primates_codon_aln.fasta")
+```
+
+```{r alignment, echo=TRUE}
+print(aln_codon)
+```
+## Phylogenetic Tree
+
+```{r phylogenetic_tree}
+aln_seqinr <- read.alignment("primates_codon_aln.fasta", format = "fasta")
+d<-dist.alignment(aln_seqinr, "identity")
+Tree<-nj(d)
+Tree_rooted <- root(Tree, outgroup = "Lemur_catta", resolve.root = TRUE)
+plot(Tree_rooted, no.margin = TRUE, cex = 0.9)
 
 ```
+
